@@ -104,7 +104,8 @@
 			  display:block;
 			}
 			</style>
-			<button class="btn btn-outline-secondary" type="button" onclick="onButtonClick()">Borrow</button>
+			<!-- DEACTIVATED: <button class="btn btn-outline-secondary" type="button" onclick="onButtonClick()">Borrow</button> -->
+			<button class="btn btn-outline-secondary" type="button" onclick="applyForLoan(loanAmount, dueDate, repaymentMethod, loanType, numGuarantors)">Apply for Loan</button>
 			
 			<!-- Check borrowing status: Did borrowing succeeded? -->
 			<div id="status" class="hide">
