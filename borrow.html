@@ -59,8 +59,8 @@
 		  
 			<!-- Currency -->
 		    <fieldset>
-				<label for="speed">Select a token:</label>
-				<select name="speed" id="speed">
+				<label for="token">Select a token:</label>
+				<select name="token" id="token">
 				  <option selected="selected">Ethereum</option>
 				  <option>Circle USD (USDC)</option>
 				  <option>Tether (USDT)</option>
@@ -76,8 +76,8 @@
 			
 			<!-- Credit Type -->
 		    <fieldset>
-				<label for="speed">Underlying credit type:</label>
-				<select name="speed" id="speed">
+				<label for="loanType">Underlying credit type:</label>
+				<select name="loanType" id="loanType">
 				  <option selected="selected">Small business loans</option>
 				  <option>Agricultural loans</option>
 				  <option>Car loans</option>
@@ -92,7 +92,7 @@
 
 			<!-- How much to borrow? -->
 		    <form action="#">
-				<label for="loanID">Coin Amount:</label>
+				<label for="amount">Coin Amount:</label>
 				<input type="number" id="amount" name="amount" placeholder="Enter desired amount to borrow" style="width: 300px;">
 			</form>
 			
@@ -100,19 +100,30 @@
 			
 			<!-- Credit Duration -->
 		    <form action="#">
-				<label for="loanID">Credit Duration:</label>
-				<input type="number" id="amount" name="amount" placeholder="Amount of months for loan repayment" style="width: 300px;">
+				<label for="duration">Credit Duration:</label>
+				<input type="number" id="duration" name="duration" placeholder="Amount of months for loan repayment" style="width: 300px;">
 			</form>
 
 			<br />
 			
 			<!-- How long to the borrower needs to repay the loan? -->
 		    <fieldset>
-				<label for="speed">Repayment method:</label>
-				<select name="speed" id="speed">
+				<label for="repayment">Repayment method:</label>
+				<select name="repayment" id="repayment">
 				  <option selected="selected">Monthly</option>
 				  <option>Quarterly</option>
 				  <option>Yearly</option>
+				</select>
+			</fieldset>
+
+			<br />
+
+			<!-- Collateral available? -->
+		    <fieldset>
+				<label for="collateral">Collateral type:</label>
+				<select name="collateral" id="collateral">
+				  <option selected="selected">Social Collateral (recommended)</option>
+				  <option>Non-Collateralized</option>
 				</select>
 			</fieldset>
 
