@@ -122,11 +122,19 @@
 		    <fieldset>
 				<label for="collateral">Collateral type:</label>
 				<select name="collateral" id="collateral">
-				  <option selected="selected">Social Collateral (recommended)</option>
+				  <option selected="selected">Social Collateral (recommended)*</option>
 				  <option>Non-Collateralized</option>
 				</select>
 			</fieldset>
 
+			<br />
+			
+			<!-- Pledges -->
+		    <form action="#">
+				<label for="pledge">Pledge Amount:</label>
+				<input type="number" id="pledge" name="plege" placeholder="1 to 20 votes" style="width: 300px;">
+			</form>
+			
 			<br />
 
 			<!-- Borrow button -->
@@ -154,6 +162,10 @@
 				<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill">⏳ Pending</span>
 				-->
 			</div>
+			
+			<br /><br />
+			
+			<p>* If you select Social Collateral, then you need one to twenty pledges.</p>
 		</div>
 	</div>
 
