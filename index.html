@@ -11,34 +11,50 @@
 	h1 {
 		font-family: 'REM';font-size: 80px;
 	}
+	@media (min-width: 768px) {
+	  .navbar-nav > li > a {
+		/* (80px - line-height of 27px) / 2 = 26.5px */
+		padding-top: 26.5px;
+		padding-bottom: 26.5px;
+		line-height: 27px;
+	}
+	
+	.btnLoan-gradient {
+		color: white;
+		background: linear-gradient(to bottom right, #66ffcc 0%, #0099ff 100%);
+	}
+	.btnLiquidity-gradient {
+		color: white;
+		background: linear-gradient(to top left, #ff66cc 0%, #ffcccc 100%);
+	}
 	</style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
 		<img class="rounded-circle me-1" width="26" height="26" src="images/icon.jpg" alt="MicroEther">
-        <a class="navbar-brand" href="index.html">MicroEther</a>
+        <a style="font-size:30px" class="navbar-brand" href="index.html">MicroEther</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="borrow.html">Borrow</a>
+              <a style="font-size:20px" class="nav-link" href="borrow.html">Borrow</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a style="font-size:20px" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Earn
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="earn/liquidity.html">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APR</span></a></li>
-                <li><a class="dropdown-item" href="earn/pledge.html">Pledge Staking <span class="badge bg-warning-subtle text-success-emphasis rounded-pill">6% APR</span></a></li>
+                <li><a style="font-size:20px" class="dropdown-item" href="earn/liquidity.html">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APR</span></a></li>
+                <li><a style="font-size:20px" class="dropdown-item" href="earn/pledge.html">Pledge Staking <span class="badge bg-warning-subtle text-success-emphasis rounded-pill">6% APR</span></a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="earn/governance.html">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li>
+                <li><a style="font-size:20px" class="dropdown-item" href="earn/governance.html">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li>
               </ul>
             </li>
           </ul>
-			<button class="btn btn-primary rounded-pill px-3" type="button"><img class="rounded-circle me-1" width="24" height="24" src="https://cdn.iconscout.com/icon/free/png-512/metamask-2728406-2261817.png" alt=""> Connect wallet</button>
+			<button style="font-size:20px" class="btn btn-primary rounded-pill px-3" type="button"><img class="rounded-circle me-1" width="24" height="24" src="https://cdn.iconscout.com/icon/free/png-512/metamask-2728406-2261817.png" alt=""> Connect wallet</button>
         </div>
       </div>
     </nav>
@@ -46,7 +62,7 @@
 	<!-- Main Content -->
     <div class="container my-5 center">
 	  <img src="images/cover.png" alt="MicroEther Customers" height="360" style="float: right;" />
-      <h2>Your one-stop access<br />to decentralized micro finance</h2>
+      <h2>Your one-stop access<br />to decentralized microfinance</h2>
       <div class="col-lg-8 px-0">
         <h4>Borrow coins to fuel your growth &#x1F680;</h4>
 	  <h1><b>Micro</b>Ether</h1>
@@ -55,14 +71,14 @@
 		
         <h5>Participate in the financial market of the future</h5><br>
 
-        <a href="borrow.html" class="btn btn-primary">Get a loan</a>
-        <a href="./earn/liquidity.html" class="btn btn-success">Provide liquidity</a>
+        <a href="borrow.html" class="btn btnLoan-gradient btn-lg">Get a loan</a>
+        <a href="./earn/liquidity.html" class="btn btnLiquidity-gradient btn-lg">Provide liquidity</a>
       </div>
     </div>
 
 	<!-- Features -->
 	<div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="pb-2 border-bottom text-center">The Right Place to Become a Impact Maker</h2>
+    <h2 class="pb-2 border-bottom text-center">The Right Place to Become an Impact Maker</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
       <div class="col d-flex align-items-start">
         <div class="icon-square bg-light text-dark flex-shrink-0 me-4">
@@ -108,46 +124,52 @@
     <h2 class="pb-2 border-bottom text-center">Grow with our ecosystem</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
       <div class="col d-flex align-items-start">
-        <img src="images/ethereum-foundation.png" alt="Ethereum Foundation Logo" height="60" />
+        <a target="_blank" href="https://ethereum.org/en/foundation/"><img src="images/ethereum-foundation.png" alt="Ethereum Foundation Logo" height="60" /></a>
       </div>
       <div class="col d-flex align-items-start">
-        <img src="images/1inch.png" alt="1Inch Logo" height="60" />
+        <a target="_blank" href="https://1inch.io/"><img src="images/1inch.png" alt="1Inch Logo" height="60" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/fija-finance.svg" alt="fija finance Logo" height="55" />
+        <a target="_blank" href="https://fija.finance/"><img src="images/fija-finance.svg" alt="fija finance Logo" height="55" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/munichx.webp" alt="MunichX Logo" height="60" />
+        <a target="_blank" href="https://www.munichx.net/"><img src="images/munichx.webp" alt="MunichX Logo" height="60" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/ethmunich.svg" alt="ETHMunich Logo" height="63" />
+        <a target="_blank" href="https://www.unternehmertum.de/"><img src="images/unternehmertum.png" alt="UnternehmerTUM Logo" height="55" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/unternehmertum.png" alt="UnternehmerTUM Logo" height="55" />
+        <a target="_blank" href="https://chain.link/"><img src="images/chainlink.png" alt="Chainlink Logo" height="58" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/chainlink.png" alt="Chainlink Logo" height="58" />
+        <a target="_blank" href="https://metamask.io/"><img src="images/metamask.png" alt="MetaMask Logo" height="65" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/metamask.png" alt="MetaMask Logo" height="65" />
+        <a target="_blank" href="https://uniswap.org/"><img src="images/uniswap.png" alt="UniSwap Logo" height="55" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/uniswap.png" alt="UniSwap Logo" height="60" />
+        <a target="_blank" href="https://www.circle.com/en/usdc"><img src="images/circle.webp" alt="Circle Logo" height="50" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/gateway-fm.png" alt="Gateway.fm Logo" height="60" />
+        <a target="_blank" href="https://tether.to/en/"><img src="images/tether.svg" alt="Tether Logo" height="55" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/polygon.png" alt="Polygon Logo" height="69" />
+        <a target="_blank" href="https://gateway.fm/"><img src="images/gateway-fm.png" alt="Gateway.fm Logo" height="60" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/molecule-protocol.svg" alt="Molecule Protocol Logo" height="65" />
+        <a target="_blank" href="https://ethmunich.de/"><img src="images/ethmunich.svg" alt="ETHMunich Logo" height="63" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/worldcoin.png" alt="Worldcoin Logo" height="65" />
+        <a target="_blank" href="https://polygon.technology/"><img src="images/polygon.png" alt="Polygon Logo" height="69" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/optimism.png" alt="Optimism Logo" height="65" />
+        <a target="_blank" href="https://moleculeprotocol.io/"><img src="images/molecule-protocol.svg" alt="Molecule Protocol Logo" height="65" /></a>
+      </div>
+	  <div class="col d-flex align-items-start">
+        <a target="_blank" href="https://worldcoin.org/"><img src="images/worldcoin.png" alt="Worldcoin Logo" height="65" /></a>
+      </div>
+	  <div class="col d-flex align-items-start">
+        <a target="_blank" href="https://www.optimism.io/"><img src="images/optimism.png" alt="Optimism Logo" height="65" /></a>
       </div>
     </div>
   </div>
@@ -157,28 +179,28 @@
     <h2 class="pb-2 border-bottom text-center">Built by a visionary team from leading organizations</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
       <div class="col d-flex align-items-start">
-        <img src="images/tum.png" alt="TUM Logo" height="60" />
+        <a target="_blank" href="https://www.tum.de/"><img src="images/tum.png" alt="TUM Logo" height="60" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/goethe_uni_frankfurt.jpg" alt="Goethe Universität Frankfurt am Main Logo" height="69" />
+        <a target="_blank" href="https://www.uni-frankfurt.de/"><img src="images/goethe_uni_frankfurt.jpg" alt="Goethe Universität Frankfurt am Main Logo" height="69" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/cdtm.webp" alt="CDTM Logo" height="65" />
+        <a target="_blank" href="https://www.cdtm.de/"><img src="images/cdtm.webp" alt="CDTM Logo" height="65" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/effective-altruism.png" alt="Effective Altruism Logo" height="69" />
+        <a target="_blank" href="https://www.effectivealtruism.org/"><img src="images/effective-altruism.png" alt="Effective Altruism Logo" height="69" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/ionity.png" alt="IONITY Logo" height="45" />
+        <a target="_blank" href="https://ionity.eu/"><img src="images/ionity.png" alt="IONITY Logo" height="45" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/deutsche-bank.png" alt="Deutsche Bank Logo" height="69" />
+        <a target="_blank" href="https://www.db.com/"><img src="images/deutsche-bank.png" alt="Deutsche Bank Logo" height="69" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/start-munich.svg" alt="START Munich Logo" height="69" />
+        <a target="_blank" href="https://www.startmunich.de/"><img src="images/start-munich.svg" alt="START Munich Logo" height="69" /></a>
       </div>
 	  <div class="col d-flex align-items-start">
-        <img src="images/enactus.webp" alt="Enactus Logo" height="60" />
+        <a target="_blank" href="https://enactus-muenchen.de/"><img src="images/enactus.webp" alt="Enactus Logo" height="60" /></a>
       </div>
     </div>
   </div>
