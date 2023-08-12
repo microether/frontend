@@ -90,6 +90,34 @@
 
 			<br />
 
+			<!-- How much to borrow? -->
+		    <form action="#">
+				<label for="loanID">Coin Amount:</label>
+				<input type="number" id="amount" name="amount" placeholder="Enter desired amount to borrow" style="width: 300px;">
+			</form>
+			
+			<br />
+			
+			<!-- Credit Duration -->
+		    <form action="#">
+				<label for="loanID">Credit Duration:</label>
+				<input type="number" id="amount" name="amount" placeholder="Amount of months for loan repayment" style="width: 300px;">
+			</form>
+
+			<br />
+			
+			<!-- How long to the borrower needs to repay the loan? -->
+		    <fieldset>
+				<label for="speed">Repayment method:</label>
+				<select name="speed" id="speed">
+				  <option selected="selected">Monthly</option>
+				  <option>Quarterly</option>
+				  <option>Yearly</option>
+				</select>
+			</fieldset>
+
+			<br />
+
 			<!-- Borrow button -->
 			<script>
 			function onButtonClick(){
