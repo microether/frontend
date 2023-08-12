@@ -3,36 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>MicroEther</title>
-
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Provide capital - MicroEther</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="./">MicroEther</a>
+        <a class="navbar-brand" href="../index.html">MicroEther</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./borrow">Borrow</a>
+              <a class="nav-link" href="../borrow.html">Borrow</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Earn
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./earn/liquidity">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APR</span></a></li>
-                <li><a class="dropdown-item" href="./earn/pledge">Pledge Staking <span class="badge bg-warning-subtle text-success-emphasis rounded-pill">6% APR</span></a></li>
+                <li><a class="dropdown-item active" href="./liquidity.html">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APR</span></a></li>
+                <li><a class="dropdown-item" href="./pledge.html">Pledge Staking <span class="badge bg-warning-subtle text-success-emphasis rounded-pill">6% APR</span></a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="./earn/governance">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li>
+                <li><a class="dropdown-item" href="./governance.html">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li>
               </ul>
             </li>
           </ul>
@@ -42,11 +37,12 @@
     </nav>
 
 	<!-- Main Content -->
-    <div class="container my-5 col-md-6 center">	  
-      	<!-- Borrow -->
+    <div class="container my-5 col-md-6 center">
+		<img src="../images/slider-earn.webp" alt="Borrow on MicroEther" height="300" style="float: right;" />
+      	<!-- Provide liquidity -->
 		<div class="h-100 p-5 bg-body-tertiary border rounded-3">
-		  <h3>Borrow a micro loan</h3>
-		  <p>Get a loan for microfinancing with MicroEther liquidity pool:</p>
+		  <h3>Earn with lending out micro loans</h3>
+		  <p>Provide your capital in the aggregated liquidity on MicroEther's liquidity pool. Enable people around the world with break the poverty trap with lending micro loans.</p>
 
 			<!-- Currency -->
 		    <fieldset>
@@ -55,6 +51,7 @@
 				  <option selected="selected">Ethereum</option>
 				  <option>Worldcoin</option>
 				  <option>Wrapped BTC</option>
+				  <option>1Inch</option>
 				  <option>Polygon</option>
 				  <option>Chainlink</option>
 				</select>
@@ -104,9 +101,8 @@
 		</ul>
 	  </footer>
 	</div>
-	
-	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
   </body>
 </html>
