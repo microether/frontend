@@ -10,6 +10,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
+		<img class="rounded-circle me-1" width="26" height="26" src="images/icon.jpg" alt="MicroEther">
         <a class="navbar-brand" href="index.html">MicroEther</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,11 +51,13 @@
 				<label for="speed">Select a token:</label>
 				<select name="speed" id="speed">
 				  <option selected="selected">Ethereum</option>
-				  <option>Worldcoin</option>
-				  <option>Wrapped BTC</option>
-				  <option>1Inch</option>
-				  <option>Polygon</option>
-				  <option>Chainlink</option>
+				  <option>Circle USD (USDC)</option>
+				  <option>Tether (USDT)</option>
+				  <option>Wrapped BTC (WBTC)</option>
+				  <option>1Inch (1INCH)</option>
+				  <option>Chainlink (LINK)</option>
+				  <option>Polygon (MATIC)</option>
+				  <option>Worldcoin (WLD)</option>
 				</select>
 			</fieldset>
 		
@@ -80,9 +83,9 @@
 			<button class="btn btn-outline-secondary" type="button">Borrow</button>
 			
 			<!-- Check borrowing status: Did borrowing succeeded? -->
-			<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">Success</span>
-			<span class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill">Failed</span>
-			<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill">Pending</span>
+			<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">&#10084; Success</span>
+			<span class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill">&#x26A0; Failed</span>
+			<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill">⏳ Pending</span>
 		</div>
 	</div>
 
