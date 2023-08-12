@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vote for the borrower - MicroEther</title>
+    <title>Vote for borrower - MicroEther</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 	<style>
@@ -34,10 +34,10 @@
                 Earn
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a style="font-size:20px" class="dropdown-item" href="./liquidity.html">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APR</span></a></li>
-                <li><a style="font-size:20px" class="dropdown-item active" href="./pledge.html">Pledge Staking <span class="badge bg-warning-subtle text-success-emphasis rounded-pill">6% APR</span></a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a style="font-size:20px" class="dropdown-item" href="./governance.html">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li>
+                <li><a style="font-size:20px" class="dropdown-item" href="./liquidity.html">Provide liquidity <span class="badge bg-success-subtle text-success-emphasis rounded-pill">20% APY</span></a></li>
+                <li><a style="font-size:20px" class="dropdown-item active" href="./pledge.html">Approve Loans</a></li>
+                <!-- DEACTIVATED: <li><hr class="dropdown-divider"></li>
+                <li><a style="font-size:20px" class="dropdown-item" href="./governance.html">Pool Governance <span class="badge bg-danger-subtle text-success-emphasis rounded-pill">3% APR</span></a></li> -->
               </ul>
             </li>
           </ul>
@@ -50,14 +50,15 @@
     <div class="container my-5 col-md-6 center">
       	<!-- Provide liquidity -->
 		<div class="h-100 p-5 bg-body-tertiary border rounded-3">
-		<img src="../images/pledge.png" alt="Borrow on MicroEther" height="230" style="float: right;" />
+		<img src="../images/governance.png" alt="Borrow on MicroEther" height="230" style="float: right;" />
 		  <h3>Support your acquaintance with your voting power</h3>
 		  <p>Help your loved ones to get a loan. Pledge for them. If they pay back the loan on time you get a financial reward. If not, your staked collateral will be burned.</p>
 
 			<!-- Enter Crypto Address -->
-		    <p>...</p>
-		
-			<br />
+		    <form action="#">
+				<label for="loanID">Loan ID:</label>
+				<input type="text" id="loanID" name="loadID" placeholder="Enter MicroEther Loan ID" style="width: 300px;"><br><br>
+			</form>
 			
 			<!-- Pledge button -->
 			<script>
@@ -85,6 +86,17 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Info Content -->
+    <div class="container my-5 col-md-6 center">
+      	<!-- How does this work? -->
+		<div class="h-100 p-5 bg-body-tertiary border rounded-3">
+		  <h5>&#x1F6C8; Info</h5>
+		  <h4>Your Approval, Their Success, Our Growth</h4>
+		  <p>Every loan approval on MicroEther is a vote of confidence, a nudge towards financial inclusivity. When the borrowers you endorse repay their loans, it reflects positively on your credit score, ensuring you enjoy preferential loan terms and more. But it's not just about numbers—it's about fostering a community where trust translates to tangible rewards. Be part of this ripple effect. Empower others, empower yourself.</p>
+			</div>
+		</div>
+	</div>
 
 	<!-- Footer -->
 	<div class="container">
@@ -92,7 +104,7 @@
 		<p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 MicroEther</p>
 
 		<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-		  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+		  <img width="80" height="80" src="../images/icon.jpg" alt="MicroEther">
 		</a>
 
 		<ul class="nav col-md-4 justify-content-end">
